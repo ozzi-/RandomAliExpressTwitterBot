@@ -18,6 +18,7 @@ sorryNotFoundMarker="Sorry, your search \""
 WINDOW_SIZE = "1280,1000"
 chrome_options = Options()  
 chrome_options.add_argument("--headless")  
+chrome_options.add_argument("--no-sandbox")  
 chrome_options.add_argument("--window-size=%s" % WINDOW_SIZE)
 
 def getWords():
