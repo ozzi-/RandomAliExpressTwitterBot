@@ -46,6 +46,8 @@ def getFirstItemHref(browser):
 def screenShotItem(browser,url):
 	scPath = "screenshot.png";
 	browser.get(url)
+	browser.implicitly_wait(3)
+	browser.find_element_by_xpath("//button[@data-role='gdpr-accept']").click()
 	browser.get_screenshot_as_file(scPath)
 	return scPath
 
