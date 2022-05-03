@@ -13,7 +13,7 @@ from time import sleep
 from creds import *
 
 aliExpressBaseSearchURL='https://www.aliexpress.com/wholesale?SearchText='
-aliExpressItemHrefMarker='www.aliexpress.com/item/'
+aliExpressItemHrefMarker='aliexpress.com/item/'
 sorryNotFoundMarker="Sorry, your search \""
 WINDOW_SIZE = "1280,1000"
 chrome_options = Options()  
@@ -25,7 +25,7 @@ def getWords():
 	word_site = "https://www.mit.edu/~ecprice/wordlist.10000"
 	response = requests.get(word_site)
 	WORDS = response.content.splitlines()
-	word1 = str(random.choice(WORDS).decode())
+	word1 = str(random.choice(WORDS).decode ())
 	word2 = str(random.choice(WORDS).decode())
 	return word1+"+"+word2
 
